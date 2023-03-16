@@ -1,6 +1,7 @@
 #include <stdio.h>
-/*
- * grammer
+/** main - Entry point
+ *
+ * return - true
  */
 int main(void)
 {
