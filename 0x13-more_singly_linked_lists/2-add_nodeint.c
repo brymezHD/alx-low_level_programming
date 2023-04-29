@@ -5,19 +5,19 @@
  * @head: pointer to head
  * @n: data of element
  *
- * Return: pointer to the new node, do NULL if it fails
+ * Return: pointer to the new node, NULL if it fails
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-    listint_t *nelmt;
+    listint_t *new;
 
-    nelmt = malloc(sizeof(listint_t));
-    if (!nelmt)
+    new = malloc(sizeof(listint_t));
+    if (!new)
         return (NULL);
 
-    nelmt->n = n;
-    nelmnt->next = *head;
-    *head = nelmnt;
+    new->n = n;
+    new->next = *head;
+    *head = new;
 
-    return (nelmnt);
+    return (new);
 }
