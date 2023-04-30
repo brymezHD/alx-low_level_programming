@@ -1,21 +1,20 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * sum_listint - the sum of all the data in a listint_t list
- * @head: head pointer
- * Return: all data sum.
+ * sum_listint - sum of all the data (n) of a listint_t list.
+ * @head: address head
+ * Return: return
  **/
-
 int sum_listint(listint_t *head)
 {
-    int calc = 0;
+	listint_t *scam = head;
+	int add = 0;
 
-    while (head != NULL)
-    {
-        calc += head->n;
-        head = head->next;
-    }
+	while (scam)
+	{
+		add += scam->n;
+		scam = scam->next;
+	}
 
-    return (calc);
+	return (add);
 }

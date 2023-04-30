@@ -6,18 +6,16 @@
  * @h: head pointer.
  * Return: nodes (Integer).
  **/
-
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *nt;
-	unsigned int nmb = 0;
+	const listint_t *node = h;
+	size_t nmb = 0;
 
-	nt = h;
-	while (nt)
+	while (node)
 	{
-		printf("%d\n", nt->n);
+		printf("%i\n", node->n);
 		nmb++;
-		nt = nt->next;
+		node = node->next;
 	}
+
 	return (nmb);
-}
