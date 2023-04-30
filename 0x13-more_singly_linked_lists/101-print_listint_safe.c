@@ -10,7 +10,7 @@ size_t free_listint_safe(listint_t **h)
 {
 	size_t lnk = 0;
 	int p;
-	listint_t *nums;
+	listint_t *temp;
 
 	if (!h || !*h)
 		return (0);
@@ -20,8 +20,8 @@ size_t free_listint_safe(listint_t **h)
 		p = *h - (*h)->next;
 		if (p > 0)
 		{
-			nums = (*h)->next;
-			*h = nums;
+			temp = (*h)->next;
+			*h = temp;
 			lnk++;
 		}
 		else
