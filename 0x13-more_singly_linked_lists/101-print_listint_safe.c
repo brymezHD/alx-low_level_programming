@@ -1,39 +1,23 @@
 #include "lists.h"
-#include <stdio.h>
+
 /**
- * free_listint_safe - frees a linked list
- * @h: header pointer
- *
- * Return: no ret.
- */
-size_t free_listint_safe(listint_t **h)
+ * reverse_listint - prints a listint_t linked list.
+ * @head: head pointer
+ * Return: no rtn.
+ **/
+size_t print_listint_safe(const listint_t *head)
 {
-	size_t ment = 0;
-	int pen;
-	listint_t *temp;
+	size_t rnum = 0;
+	const listint_t *nnde = head;
 
-	if (!h || !*h)
-		return (0);
+	if (!head)
+		exit(98);
 
-	while (*h)
+	while (nnde)
 	{
-		pen = *h - (*h)->next;
-		if (p > 0)
-		{
-			temp = (*h)->next;
-			*h = temp;
-			ment++;
-		}
-		else
-		{
-			*h = NULL;
-			ment++;
-			break;
-		}
+		printf("[%p] %i\n", (void *)nnde, nnde->n);
+		nnde = nnde->next;
+		rnum++;
 	}
-
-	*h = NULL;
-
-	return (ment);
+	return (rnum);
 }
-
