@@ -2,20 +2,20 @@
 
 /**
  * print_listint - prints all the elements of a list.
- * @h: link list to head of a list.
+ * @h: link list to print.
  *
  * Return: numbers of nodes.
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t lnk = 0;
+	size_t numb = 0;
 
-	while (h != NULL)
+	while (h)
 	{
 		printf("%d\n", h->n);
 		h = h->next;
-		lnk++;
+		numb++;
 	}
-	
-	return (lnk);
+
+	return (numb);
 }
