@@ -3,15 +3,16 @@
 /**
  * sum_listint - the sum of all the data in a listint_t list
  * @head: head pointer
- *
  * Return: all data sum.
- */
+ **/
+
 int sum_listint(listint_t *head)
 {
-    int calc = 0;
-    listint_t *haed = head;
+	listint_t *haed = head;
+    int calc;
 
-    while (haed)
+	calc = 0;
+    while (haed != NULL)
     {
         calc += haed->n;
         haed = haed->next;
